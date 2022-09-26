@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+ul{
+    list-style-type: none;
+}
 .clear-fx{
     clear: both;
 }
@@ -125,3 +128,70 @@ h6{
 }#smi-container .smi-icon:hover ion-icon{
     color: white;
 }
+/* navigation */
+/* #nav>ul{
+    background-color: #00acee;
+} */
+#nav ul li{
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--layout-border-color);
+}
+#nav ul li:hover{
+    border-left: 3px solid red;
+
+}
+#nav ul li span{
+    transition: margin-left .6s cubic-bezier(0.77, 0.12, 0.21, 1.77);
+}
+#nav ul li:hover>span{
+    background-color: #d3d3d3;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+.sub-manu ul{
+    display: none;
+    background-color: white;
+    border-top: 1px solid var(--layout-border-color);
+    border-right: 1px solid var(--layout-border-color);
+    min-width: 230px;
+    box-shadow:9px 11px 14px 3px black;;
+    
+}
+ul>.sub-manu:nth-child(2) ul{
+    width: 330px;
+}
+.sub-manu li{
+    line-height: 1.4rem;
+    width: 300px;
+ 
+}
+.sub-manu{
+    position: relative;
+}
+.sub-manu:hover::after{
+    border-left-color: red;
+}
+.sub-manu::after{
+    display: block;
+    content: "";
+    background-color: transparent;
+    border-left: 5px solid black;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform:translateY(-50%);
+}
+.sub-manu:hover>ul{
+    display: block;
+    position: absolute;
+    left:calc(100% + 1px);
+    top: 0;
+}
+
